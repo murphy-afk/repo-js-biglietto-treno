@@ -11,32 +11,21 @@ const kmPrice = 0.21;
 let price;
 let discount;
 
-
-
-console.log(distance, typeof distance);
-
-
 price = distance * kmPrice;
 
 if (age < 18) {
   discount = (price / 100) * 20;
   price = price - discount;
-
-  console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
 }
 
 else if (age > 65) {
   discount = (price / 100) * 40;
-  price = price -discount;
+  price = price - discount;
 
-  console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
-  
 }
 
-else {
-  console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
-  
-}
+console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
+
 
 
 
