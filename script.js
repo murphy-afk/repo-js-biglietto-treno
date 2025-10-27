@@ -5,13 +5,14 @@
 // se l'utente ha più di 65 anni calcolare lo sconto del 40% e poi stampare il prezzo del biglietto
 
 
-let distance = parseInt(prompt("Inserisci il numero di chilometri da percorrere"));
-let age = parseInt(prompt("Inserisci la tua età"));
+const distance = parseInt(prompt("Inserisci il numero di chilometri da percorrere"));
+const age = parseInt(prompt("Inserisci la tua età"));
 
 
 if (isNaN(distance) || isNaN(age) || age < 0 || age > 100) {
   console.log("errore: inserire valori validi");
 }
+
 else {
   // variables
   const minorDiscount = 20;
