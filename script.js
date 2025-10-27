@@ -22,19 +22,19 @@ if (age < 18) {
   discount = (price / 100) * 20;
   price = price - discount;
 
-  console.log(`il costo del biglietto è ${price}`);
+  console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
 }
 
 else if (age > 65) {
   discount = (price / 100) * 40;
   price = price -discount;
 
-  console.log(`il costo del biglietto è ${price}`);
+  console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
   
 }
 
 else {
-  console.log(`il costo del biglietto è ${price}`);
+  console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
   
 }
 
