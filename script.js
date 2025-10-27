@@ -7,25 +7,31 @@
 
 let distance = parseInt(prompt("Inserisci il numero di chilometri da percorrere"));
 let age = parseInt(prompt("Inserisci la tua età"));
-const kmPrice = 0.21;
-let price;
-let discount;
 
-price = distance * kmPrice;
 
-if (age < 18) {
-  discount = (price / 100) * 20;
-  price = price - discount;
+if (isNaN(distance) || isNaN(age) || age < 0 || age > 100) {
+  console.log("errore: inserire valori validi");
 }
+else {
+  // variables
+  const minorDiscount = 20;
+  const elderDiscount = 40;
+  const kmPrice = 0.21;
+  let price = distance * kmPrice;
+  let discount;
 
-else if (age > 65) {
-  discount = (price / 100) * 40;
-  price = price - discount;
+  if (age < 18) {
+    discount = price * (minorDiscount / 100);
+    price = price - discount;
+  }
 
+  else if (age > 65) {
+    discount = price * (elderDiscount / 100);
+    price = price - discount;
+  }
+
+  console.log(`Il costo del biglietto è ${price.toFixed(2)}€`);
 }
-
-console.log(`il costo del biglietto è ${price.toFixed(2)}€`);
-
 
 
 
