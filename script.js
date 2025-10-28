@@ -19,17 +19,16 @@ else {
   const elderDiscount = 40;
   const kmPrice = 0.21;
   let price = distance * kmPrice;
-  let discount;
+  let discount = 0;
 
   if (age < 18) {
     discount = price * (minorDiscount / 100);
-    price = price - discount;
   }
 
   else if (age > 65) {
     discount = price * (elderDiscount / 100);
-    price = price - discount;
   }
+  price = price - discount;
 
   console.log(`Il costo del biglietto è ${price.toFixed(2)}€`);
 }
